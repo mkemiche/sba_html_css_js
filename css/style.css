@@ -1,0 +1,276 @@
+@media (min-width: 1300px) , (max-width: 1920px){
+.container {
+  max-width: 1840px;
+}
+.search-form {
+  height: 70px;
+}
+.grid{
+  width: calc(33% - 15px);
+}
+.grid.info{
+  margin: -11% 0 0 18%;
+}
+
+.grid.card{
+  margin: auto;
+  width: calc(70% - 20%);
+}
+
+.row img {
+  width: 100%;
+}
+}
+
+@media (max-width: 1280px){
+  .search-form {
+    height: 40px;
+  }  
+  .grid{
+    width: calc(40% - 15px);
+  }
+
+  .grid.info{
+    margin: -15% 0 0 11%;
+  }
+
+  .grid.card{
+    margin: auto;
+    width: calc(90% - 20%);
+  }
+
+}
+
+@media screen and (max-width: 760px) {
+  .details {
+    flex-direction: column;
+  }
+  .grid{
+    width: calc(100% - 15px);
+  }
+  .grid.info{
+    margin: 2% auto;
+    width: 95%;
+    padding: auto 30%;
+  }
+
+  .row.row-cols-1{
+    flex-direction: column;
+  }
+
+  .col{
+    width: 100%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: tahoma;
+  background-color: #f8f9fa !important;
+  max-width: 100%;
+}
+
+
+header {
+    padding: 60px;
+    text-align: center;
+    background: #f89d13;
+    color: white;
+    font-size: 30px;
+    height: 200px;
+    border-radius: 0 0 85% 85% / 30%;
+  }
+  
+
+  /* Page Content */
+  /*.content {padding:20px;}*/
+h2 {
+  text-align: center;
+  margin: 30px auto;
+}
+
+main {
+  background: #f9f9f9 !important;
+  max-width: 100%;
+  margin: 80px auto; 
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 80px auto;
+}
+
+#search, #filter {
+  margin-top: 5px;
+}
+
+
+ .flexSwitchCheckChecked{
+  height: 30px;
+  width: 70px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: black;
+  color: white;
+
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+
+}
+
+.flip-box-front > img {
+  width: 100%;
+  height: 100%;
+  flex-basis: 25%;
+  flex-grow: inherit;
+}
+
+
+
+article{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f89d13;
+  padding: 50px;
+  font-size: 20px;
+  margin-top:5%;
+}
+
+footer{
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3f2fd;
+  color: black;
+}
+
+.row{
+  width: 100%;
+}
+
+.row.row-cols-1{
+  margin: auto;
+  justify-content: center;
+  
+}
+
+.col{
+  
+  cursor:pointer;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 15px 0 0;
+  justify-content: center;
+}
+
+.g {
+  padding: 15px;
+  margin: 0 0 15px 15px;
+}
+
+#carouselExampleIndicators{
+  width: 100%;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 992px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+  padding: 0 16px;
+}
+
+.contact::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
