@@ -1,7 +1,4 @@
 @media (min-width: 1300px) , (max-width: 1920px){
-.container {
-  max-width: 1840px;
-}
 .search-form {
   height: 70px;
 }
@@ -79,7 +76,7 @@ header {
     color: white;
     font-size: 30px;
     height: 200px;
-    border-radius: 0 0 85% 85% / 30%;
+ /*   border-radius: 0 0 85% 85% / 30%;*/
   }
   
 
@@ -102,9 +99,24 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 80px auto;
+  margin: -60px auto;
+  border: #fff solid 2px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
 }
 
+.container .row { 
+  justify-content: center;
+}
+
+.container .select-wrap {
+  margin: 30px auto;
+}
+
+.container .agent {
+  margin: 80px auto; 
+}
 #search, #filter {
   margin-top: 5px;
 }
@@ -273,4 +285,13 @@ footer{
 a{
   text-decoration: none;
   color: black;
+}
+
+.btn-info:hover {
+  background-color: #f89d13;
+  border-color: #f89d13;
+}
+
+.btn-info{
+  width: 100%;
 }
