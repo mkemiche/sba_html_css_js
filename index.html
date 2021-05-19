@@ -5,49 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     <!-- navbar -->
     <div class="menu">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">All For Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">All For Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Agents</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    connexion
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button">Login</button>
+                    <button class="dropdown-item" type="button">Register</button>
+                    <button class="dropdown-item" type="button">Reset password</button>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </nav>
-    </div>
+          </div>
+        </nav>
+  </div>
     <header>
       </header>
       <!-- Search bar -->
@@ -55,97 +45,100 @@
         <div class="row">
             <div class="col-md-4">
             <form class="form-floating">
-              <input type="text" class="form-control" id="floatingInputValue" placeholder="What you looking for ?">
+              <input type="text" class="form-control" id="searchForm" placeholder="What you looking for ?">
               <label for="floatingInputValue">What you looking for ?</label>
             </form>
           </div>
             <div class="col-md-4">
             <form class="form-floating">
-              <input type="text" class="form-control" id="floatingInputValue" placeholder="Where ?">
+              <input type="text" class="form-control" id="searchLocation" placeholder="Where ?">
               <label for="floatingInputValue">Where ?</label>
             </form>
           </div>
             <div class="col-md-4">
-              <button id="search" class="btn btn-primary btn-lg" >Search</button>
-              <button id="filter" class="btn btn-outline-primary btn-lg" onclick="showFilter()">Filter</button>
+              <button id="searchBtn" class="btn btn-primary btn-lg" >Search</button>
+              <button id="filterBtn" class="btn btn-outline-primary btn-lg" onclick="showFilter()">Filter</button>
             </div>
         </div>
     
-       <div class="select-wrap">
+      
         <div class="row">
-          <div class="col-md-4">
-            <div class="dropdown">
-              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Property Status
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">For Rent</a></li>
-                <li><a class="dropdown-item" href="#">For Sale</a></li>
-              </ul>
+          <div class="col-md-2">
+            <div class="form-floating filter">
+              <select class="form-select" id="status" aria-label="Floating label select example" name="status">
+                <option selected></option>
+                <option value="rent">For Rent</option>
+                <option value="ale">For Sale</option>
+              </select>
+              <label for="floatingSelectGrid">Property Status</label>
             </div>
+
+            
           </div>
-          <div class="col-md-3">
-            <div class="dropdown">
-              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Bedrooms
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">1</a></li>
-                <li><a class="dropdown-item" href="#">2</a></li>
-                <li><a class="dropdown-item" href="#">3</a></li>
-                <li><a class="dropdown-item" href="#">4+</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="dropdown">
-              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Bathrooms
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">1</a></li>
-                <li><a class="dropdown-item" href="#">2</a></li>
-                <li><a class="dropdown-item" href="#">3</a></li>
-                <li><a class="dropdown-item" href="#">4+</a></li>
-              </ul>
+          <div class="col-md-2">
+            <div class="form-floating filter">
+              <select class="form-select" id="bed" aria-label="Floating label select example" name="bed">
+                <option selected></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <label for="floatingSelectGrid">Bedrooms</label>
             </div>
           </div>
           <div class="col-md-2">
-            <div class="dropdown">
-              <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Price
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <div class="range">
-                  <input type="range" class="form-range" min="0" max="1000000" step="1000" id="customRange2" />
-                </div>
-                
-              </ul>
+            <div class="form-floating filter">
+              <select class="form-select" id="bath" aria-label="Floating label select example" name="bath">
+                <option selected></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4 </option>
+                <option value="5">5</option>
+              </select>
+              <label for="floatingSelectGrid">Bathrooms</label>
             </div>
           </div>
-          <!--<div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" style="
-            height: 30px;
-            width: 70px;">
-            <label class="form-check-label" for="flexSwitchCheckChecked" style="
-            margin-top: 8px;
-            margin-left: 5px;">With Basement ?</label>
-          </div>-->
+          <div class="col-md-2">
+            <div class="form-floating filter">
+              <select class="form-select" id="price" aria-label="Floating label select example" name="price">
+                <option selected></option>
+                <option value="0 - 50,000">0 - $50,000</option>
+                <option value="50,000 - 100,000">$50,000 - $100,000</option>
+                <option value="100,000 - 300,000">$100,000 - $300,000</option>
+                <option value="300,000 - 500,000">$300,000 - $500,000</option>
+                <option value="500,000 - 1,000,000">$500,000 - $1,000,000</option>
+                <option value="1,000,000 ">$1,000,000 +</option>
+              </select>
+              <label for="floatingSelectGrid">Price</label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-check form-switch filter">
+              <input class="form-check-input " type="checkbox" id="pool" style="height: 30px;width: 70px;" >
+              <label class="form-check-label" for="flexSwitchCheckChecked" style="margin-top: 8px;margin-left: 5px;">Swimming pool</label>
+            </div>
         </div>
        </div>
-      </div>
-
+    </div>
     
 <main>
   <h2>New Properties : </h2>
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="ol">
+    <div class="col">
       <a href="property_details.html">
       <div class="card h-100">
         <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG91c2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Click to view details">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title" id="price">$1,450,000</h5>
+          <p class="card-text">
+            <div id="location">Columbus, OH 43228</div>
+            <div id="bed">5 bedrooms</div>
+            <div id="bath">3 bathrooms</div>
+            <div id="swim">Swimming pool <i class="fa fa-check" aria-hidden="true"></i></div>
+          </p>
         </div>
         <div class="card-footer">
           <small class="text-muted">Added 1 week ago</small>
@@ -158,8 +151,12 @@
       <div class="card h-100">
         <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Click to view details">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <h5 class="card-title" id="price">$850,000</h5>
+          <p class="card-text">
+            <div id="location">Columbus, OH 43223</div>
+            <div id="bed">3 bedrooms</div>
+            <div id="bath">2 bathrooms</div>
+          </p>
         </div>
         <div class="card-footer">
           <small class="text-muted">Added 1 day ago</small>
@@ -173,8 +170,12 @@
       <div class="card h-100">
         <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Click to view details">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <h5 class="card-title" id="price">$250,000</h5>
+          <p class="card-text">
+            <div id="location">Dublin, OH 44023</div>
+            <div id="bed">4 bedrooms</div>
+            <div id="bath">2 bathrooms</div>
+          </p>
         </div>
         <div class="card-footer">
           <small class="text-muted">Added 6 days ago</small>
@@ -187,8 +188,12 @@
       <div class="card h-100">
         <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Click to view details">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <h5 class="card-title" id="price">$450,000</h5>
+          <p class="card-text">
+            <div id="location">Columbus, OH 43223</div>
+            <div id="bed">3 bedrooms</div>
+            <div id="bath">3 bathrooms</div>
+          </p>
         </div>
         <div class="card-footer">
           <small class="text-muted">Added 3 weeks ago</small>
@@ -201,8 +206,13 @@
       <div class="card h-100">
         <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Click to view details">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <h5 class="card-title" id="price">$1,300,000</h5>
+          <p class="card-text">
+            <div id="location">California, CA 24004</div>
+            <div id="bed">4 bedrooms</div>
+            <div id="bath">5 bathrooms</div>
+            <div id="swim">Swimming pool <i class="fa fa-check" aria-hidden="true"></i></div>
+          </p>
         </div>
         <div class="card-footer">
           <small class="text-muted">Added 2 months ago</small>
@@ -215,10 +225,11 @@
       <div class="card h-100">
         <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhvdXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Click to view details">
         <div class="card-body">
-          <h5 class="card-title">$1,550,000</h5>
+          <h5 class="card-title" id="price">$150,000</h5>
+          <div id="bed">3 bedrooms</div>
+            <div id="bath">2 bathrooms</div>
           <p class="card-text">
-            <div class="address">853 S Columbus Boulevard</div>
-            <div class="city">Columbus, OH 43001</div>
+            <div id="location">Columbus, OH 43150</div>
           </p>
         </div>
         <div class="card-footer">
@@ -264,16 +275,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur pariatur reiciendis numquam nostrum</p>      </div>
     </div>
   </div>
-  <div class="flip-box">
-    <div class="flip-box-inner">
-      <div class="flip-box-front">
-        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWdlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Paris">
-      </div>
-      <div class="flip-box-back">
-        <h2>Chris Garner</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur pariatur reiciendis numquam nostrum</p>      </div>
-    </div>
-  </div>
+  
 </div>
 </main>
 

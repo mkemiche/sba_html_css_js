@@ -104,25 +104,18 @@ main {
   background-color: #fff;
   padding: 30px;
   border-radius: 20px;
+  height: 200px;
 }
 
 .container .row { 
   justify-content: center;
 }
 
-.container .select-wrap {
-  margin: 30px auto;
-}
-
 .container .agent {
   margin: 80px auto; 
 }
-#search, #filter {
-  margin-top: 5px;
-}
 
-
- .flexSwitchCheckChecked{
+.flexSwitchCheckChecked{
   height: 30px;
   width: 70px;
 }
@@ -213,8 +206,7 @@ footer{
   
 }
 
-.col{
-  
+.col{ 
   cursor:pointer;
 }
 
@@ -294,4 +286,9 @@ a{
 
 .btn-info{
   width: 100%;
+}
+
+.collapse.navbar-collapse{
+  flex-grow:inherit;
+  margin-right: 15px;
 }
