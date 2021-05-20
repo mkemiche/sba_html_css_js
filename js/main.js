@@ -119,11 +119,22 @@ function checkBoxFilter(){
 }
 
 //not implemented yet
-function filterbyStatus(){
-   
+function filterbyStatus(status){
+    search();
+
+    for (const key in homeList) {
+        if (Object.hasOwnProperty.call(homeList, key)) {
+            const element = homeList[key];
+            var statusValue = element.querySelector(".rubber").innerText.split(" ")[1];
+            if(status  !== statusValue.toLowerCase()){
+                element.style.display="none";
+            }
+        }
+    }
 }
 
 function filterbyBed(beds){
+    search();
     for (const key in homeList) {
         if (Object.hasOwnProperty.call(homeList, key)) {
             const element = homeList[key];
@@ -139,6 +150,7 @@ function filterbyBed(beds){
 }
 
 function filterbyBath(baths){
+    search();
     for (const key in homeList) {
         if (Object.hasOwnProperty.call(homeList, key)) {
             const element = homeList[key];
@@ -151,6 +163,7 @@ function filterbyBath(baths){
 }
 
 function filterbyPrice(price){
+    search();
      //display all Properties
      for (const key in homeList) {
         if (Object.hasOwnProperty.call(homeList, key)) {
