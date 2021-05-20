@@ -1,4 +1,4 @@
-@media (min-width: 1300px) , (max-width: 1920px){
+@media (min-width: 1280px) , (max-width: 1920px){
 .search-form {
   height: 70px;
 }
@@ -16,6 +16,9 @@
 
 .row img {
   width: 100%;
+}
+.row{
+  margin-bottom: 30px;
 }
 }
 
@@ -35,10 +38,13 @@
     margin: auto;
     width: calc(90% - 20%);
   }
+  .row{
+    margin-bottom: 30px;
+  }
 
 }
 
-@media screen and (max-width: 760px) {
+@media (max-width: 800px) {
   .details {
     flex-direction: column;
   }
@@ -57,6 +63,13 @@
 
   .col{
     width: 100%;
+  }
+  .col-md-4{
+    margin-bottom: 30px;
+  }
+
+  .col-md-2{
+    margin-bottom: 30px;
   }
 }
 
@@ -104,7 +117,7 @@ main {
   background-color: #fff;
   padding: 30px;
   border-radius: 20px;
-  height: 200px;
+  height: auto;
 }
 
 .container .row { 
