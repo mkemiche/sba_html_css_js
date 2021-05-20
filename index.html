@@ -45,14 +45,20 @@
         <div class="row">
             <div class="col-md-4">
             <form class="form-floating">
-              <input type="text" class="form-control" id="searchForm" placeholder="What you looking for ?">
+              <input type="text" class="form-control" id="searchForm" placeholder="What you looking for ?" onchange="validation(this)">
               <label for="floatingInputValue">What you looking for ?</label>
+              <div id="validationServer03Feedback" class="invalid-feedback">
+                Only alphabets are allowed.
+              </div>
             </form>
           </div>
             <div class="col-md-4">
             <form class="form-floating">
-              <input type="text" class="form-control" id="searchLocation" placeholder="Where ?">
+              <input type="text" class="form-control" id="searchLocation" placeholder="Where ?" onchange="validation(this)">
               <label for="floatingInputValue">Where ?</label>
+              <div id="validationServer03Feedback" class="invalid-feedback">
+                Only alphabets are allowed.
+              </div>
             </form>
           </div>
             <div class="col-md-4">

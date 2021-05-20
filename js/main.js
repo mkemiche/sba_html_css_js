@@ -10,6 +10,31 @@ function showFilter(){
     $(".filter").toggle();
 }
 
+function validation(element){
+    var re = new RegExp(/^[A-Za-z]+$/);
+    var message = "";
+    var validation = false;
+    
+    if(element.value !=="" && !element.value.match(re)){
+        message = "only alphabetics are allowed";
+        validation = true;
+    }
+
+    if(validation){
+        element.classList.add("is-invalid");
+        var div = document.createElement('div');
+        var t = document.createTextNode(message);
+        div.appendChild(t);
+        div.classList.add("invalid-feedback");
+        element.appendChild(div);
+    }else{
+        if(element.classList.contains("is-invalid")){
+            element.classList.remove("is-invalid");
+        }
+
+    }
+}
+
 
 document.getElementById("searchBtn").addEventListener("click", search);
 function search(){
